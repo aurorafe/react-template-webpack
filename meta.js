@@ -22,20 +22,17 @@ module.exports = {
   },
   prompts: {
     name: {
-      when: 'isNotTest',
       type: 'string',
       required: true,
       message: 'Project name',
     },
     description: {
-      when: 'isNotTest',
       type: 'string',
       required: false,
       message: 'Project description',
       default: 'A react project',
     },
     author: {
-      when: 'isNotTest',
       type: 'string',
       message: 'Author',
     },
@@ -75,12 +72,11 @@ module.exports = {
       message: 'Use stylelint for your style code?'
     },
     lint: {
-      when: 'isNotTest',
       type: 'confirm',
       message: 'Use ESLint to lint your code?',
     },
     lintConfig: {
-      when: 'isNotTest && lint',
+      when: 'lint',
       type: 'list',
       message: 'Pick an ESLint preset',
       choices: [
@@ -123,12 +119,11 @@ module.exports = {
       ]
     },
     unit: {
-      when: 'isNotTest',
       type: 'confirm',
       message: 'Set up unit tests',
     },
     runner: {
-      when: 'isNotTest && unit',
+      when: 'unit',
       type: 'list',
       message: 'Pick a test runner',
       choices: [
@@ -150,7 +145,6 @@ module.exports = {
       ],
     },
     e2e: {
-      when: 'isNotTest',
       type: 'confirm',
       message: 'Setup e2e tests with Nightwatch?',
     },
@@ -161,7 +155,6 @@ module.exports = {
       "default": 3000
     },
     autoInstall: {
-      when: 'isNotTest',
       type: 'list',
       message:
         'Should we run `npm install` for you after the project has been created? (recommended)',
