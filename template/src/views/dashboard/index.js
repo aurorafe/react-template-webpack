@@ -44,7 +44,7 @@ class Dashboard extends Component {
 
   render () {
     return (<div className="map-content">
-      <div style={{height: '500px'}} id="map" onContextMenu={() => false}></div>
+      <div id="map" onContextMenu={() => false}></div>
   </div>)
   }
 }

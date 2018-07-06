@@ -107,14 +107,14 @@ module.exports = {
       "message": "state manage for your app",
       "choices": [
         {
-          "name": "Mobx (https://github.com/mobxjs/mobx)",
-          "value": "mobx",
-          "short": "mobx"
-        },
-        {
           "name": "Redux (https://github.com/reactjs/redux)",
           "value": "redux",
           "short": "redux"
+        },
+        {
+          "name": "Mobx (https://github.com/mobxjs/mobx)",
+          "value": "mobx",
+          "short": "mobx"
         }
       ]
     },

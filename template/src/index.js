@@ -12,8 +12,6 @@ import registerServiceWorker from './utils/registerServiceWorker';
 
 {{#if_eq state 'redux'}}
 import { Provider } from 'react-redux';
-import { ConnectedRouter } from 'react-router-redux';
-
 import {store} from './redux/index';
 {{/if_eq}}
 

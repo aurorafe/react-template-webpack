@@ -124,13 +124,14 @@ class Index extends React.Component {
     if (!selectedKeys.length) {
       // selectedKeys = [openKeys[openKeys.length - 1]];
     }
+    const menuStyle = { padding: '16px 0', width: '100%' };
     return <Menu
       theme="dark"
       defaultSelectedKeys={['dashboard']}
       mode="inline"
       onClick={this.handleMenuClick}
       selectedKeys={selectedKeys}
-      style={{ padding: '16px 0', width: '100%' }}>
+      style={menuStyle}>
       {this.getMenuItems(this.menus)}
     </Menu>
   };
@@ -213,8 +214,12 @@ class Index extends React.Component {
   };
 
   render () {
+    const layoutStyle = { minHeight: '100vh' };
+    const headerStyle = { padding: 0, height: 50 };
+    const contentStyle = { margin: '0 16px' };
+    const footerStyle = { textAlign: 'center' };
     return (
-      <Layout style={{ minHeight: '100vh' }}>
+      <Layout style={layoutStyle}>
         <Sider
           className="main-sider"
           collapsible
@@ -232,17 +237,17 @@ class Index extends React.Component {
           {this.getMenus(this.menus)}
         </Sider>
         <Layout>
-          <Header style={{ padding: 0, height: 50 }}>
+          <Header style={headerStyle}>
             <GlobalHeader
               collapsed={this.state.collapsed}
               onMenuClick={this.handleHeaderClick}
               onCollapse={this.handleMenuCollapse}
             />
           </Header>
-          <Content style={{ margin: '0 16px' }}>
+          <Content style={contentStyle}>
             {routes}
           </Content>
-          <Footer style={{ textAlign: 'center' }}>
+          <Footer style={footerStyle}>
             sakitam-fdd © 2018
           </Footer>
         </Layout>

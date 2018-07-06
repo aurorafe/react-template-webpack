@@ -31,6 +31,9 @@ class GlobalHeader extends React.Component {
       name: 'sakitam',
       avatar: 'https://gw.alipayobjects.com/zos/rmsportal/BiazfanxmamNRoxxVxka.png'
     };
+    const style = {
+      marginLeft: 8
+    };
     const menu = (
       <Menu className="header-menu" selectedKeys={[]} onClick={onMenuClick}>
         <Menu.Item disabled>
@@ -56,7 +59,7 @@ class GlobalHeader extends React.Component {
               </span>
             </Dropdown>
           ) : (
-            <Spin size="small" style={{ marginLeft: 8 }} />
+            <Spin size="small" style={style} />
           )}
         </div>
       </div>

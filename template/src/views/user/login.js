@@ -50,6 +50,7 @@ class LoginForm extends React.Component {
   render() {
     // eslint-disable-next-line
     const { getFieldDecorator } = this.props.form;
+    const iconStyle = { color: 'rgba(0,0,0,.25)' };
     return (
       <div className="login">
         <div className="login-content">
@@ -65,14 +66,14 @@ class LoginForm extends React.Component {
                           {getFieldDecorator('userName', {
                             rules: [{ required: true, message: '请输入用户名!' }],
                           })(
-                            <Input prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="用户名" />
+                            <Input prefix={<Icon type="user" style={iconStyle} />} placeholder="用户名" />
                           )}
                         </FormItem>
                         <FormItem>
                           {getFieldDecorator('password', {
                             rules: [{ required: true, message: '请输入密码!' }],
                           })(
-                            <Input prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />} type="password" placeholder="密码" />
+                            <Input prefix={<Icon type="lock" style={iconStyle} />} type="password" placeholder="密码" />
                           )}
                         </FormItem>
                         <FormItem className="form-item-remember">
