@@ -143,15 +143,6 @@
     "node": ">= 6.0.0",
     "npm": ">= 3.0.0"
   },
-  "lint-staged": {
-    "**/*.{js,jsx,scss,less,styl}": [
-      "git add"
-    ],
-    "**/*.{js,jsx}": "npm run lint-staged:js",
-    "**/*.scss": "stylelint --syntax scss",
-    "**/*.less": "stylelint --syntax less",
-    "**/*.styl": "stylelint --syntax styl"
-  },
   "browserslist": [
     "> 1%",
     "last 2 versions",

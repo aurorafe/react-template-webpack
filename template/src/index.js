@@ -8,7 +8,6 @@ import {AppContainer} from 'react-hot-loader';
 import zhCN from 'antd/lib/locale-provider/zh_CN';
 import { LocaleProvider  } from 'antd';
 import routes from './routes/index';
-import registerServiceWorker from './utils/registerServiceWorker';
 
 {{#if_eq state 'redux'}}
 import { Provider } from 'react-redux';
@@ -75,5 +74,3 @@ if (env === 'development') {
     );
   };
 }
-
-registerServiceWorker();

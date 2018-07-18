@@ -126,6 +126,7 @@ module.exports = {
       when: 'unit',
       type: 'list',
       message: 'Pick a test runner',
+      default: 'noTest',
       choices: [
         {
           name: 'Jest',

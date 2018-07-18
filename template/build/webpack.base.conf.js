@@ -14,18 +14,19 @@ const createLintingRule = () => ({
   }
 });
 
+const publicPath = (process.env.NODE_ENV === 'production'
+  ? config.build.assetsPublicPath
+  : config.dev.assetsPublicPath);
+
 module.exports = {
   context: path.resolve(__dirname, '../'),
-  entry: [
-    './src/index',
-    require.resolve('react-dev-utils/webpackHotDevClient'),
-  ],
+  entry: {
+    app: './src/index'
+  },
   output: {
     path: config.build.assetsRoot,
     filename: '[name].js',
-    publicPath: process.env.NODE_ENV === 'production'
-      ? config.build.assetsPublicPath
-      : config.dev.assetsPublicPath
+    publicPath: publicPath
   },
   resolve: {
     extensions: ['.js', '.jsx', '.json'],
